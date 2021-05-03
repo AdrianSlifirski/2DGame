@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/tilesets/MossyTileset.tres" type="TileSet" id=2]
+[ext_resource path="res://Scenes/world_complete.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/parallax_forest.tscn" type="PackedScene" id=4]
+
+[node name="world_2" type="Node2D"]
+
+[node name="character" parent="." instance=ExtResource( 1 )]
+position = Vector2( 128, 822.461 )
+
+[node name="world_complete" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2176, 256 )
+next_world_name = "res://Scenes/world_1.tscn"
+
+[node name="ground" type="TileMap" parent="."]
+position = Vector2( 0, 896 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 256, 256 )
+format = 1
+tile_data = PoolIntArray( -196599, 0, 3, -131064, 0, 0, -131063, 0, 327681, -65531, 0, 0, -65530, 0, 2, -65528, 0, 65536, -65527, 0, 65538, 0, 0, 0, 1, 0, 1, 2, 0, 1, 3, 0, 1, 4, 0, 1, 5, 0, 65541, 6, 0, 65540, 7, 0, 1, 8, 0, 65541, 9, 0, 65538, 65536, 0, 131072, 65537, 0, 131073, 65538, 0, 131073, 65539, 0, 131073, 65540, 0, 131073, 65541, 0, 131073, 65542, 0, 131073, 65543, 0, 131073, 65544, 0, 131073, 65545, 0, 131074 )
+
+[node name="parallax_forest" parent="." instance=ExtResource( 4 )]

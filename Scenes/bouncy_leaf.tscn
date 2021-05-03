@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/images/mossy_scaled/Hanging Plants.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/bouncy_leaf.cs" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 101.366, 32.7855 )
+
+[node name="bouncy_leaf" type="Area2D"]
+collision_layer = 64
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 576, 1152, 448, 320 )
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2( -83.156, -96.6408 )
+shape = SubResource( 1 )

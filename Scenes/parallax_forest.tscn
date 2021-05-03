@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/images/parallax_jungle/j4.png" type="Texture" id=1]
+[ext_resource path="res://Assets/images/parallax_jungle/j1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/images/parallax_jungle/j3.png" type="Texture" id=3]
+[ext_resource path="res://Assets/images/parallax_jungle/j2.png" type="Texture" id=4]
+
+[node name="parallax_forest" type="ParallaxBackground"]
+
+[node name="green_base" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 1920, 1080 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="green_base"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="far_trees" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.3, 0.3 )
+motion_mirroring = Vector2( 3840, 1080 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="far_trees"]
+texture = ExtResource( 3 )
+centered = false
+
+[node name="middle_trees" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.6, 0.6 )
+motion_mirroring = Vector2( 5760, 1080 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="middle_trees"]
+texture = ExtResource( 4 )
+centered = false
+
+[node name="foreground_trees" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.8, 0.8 )
+motion_mirroring = Vector2( 7680, 1080 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="foreground_trees"]
+texture = ExtResource( 2 )
+centered = false
